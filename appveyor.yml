@@ -13,8 +13,6 @@ build_script:
 
     build\build.bat
 
-    conda init cmd.exe
-
     tests\test.bat
 
     build\conda_build.bat
