@@ -14,9 +14,11 @@ if not defined QLIC_KC (
 )
 
 
+@echo OFF
 set PATH=%OP%
 call build\getkdb.bat                                || goto :error
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+call "C:\Miniconda3-x64\Scripts\activate.bat"
 mkdir embedpy
 cd embedpy
 echo getembedpy"latest" | q ..\build\getembedpy.q -q || goto :error
