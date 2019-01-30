@@ -14,6 +14,8 @@ build_script:
     build\build.bat
 
     tests\test.bat
+    
+    call "C:\Miniconda3-x64\Scripts\activate.bat"    
 
     build\conda_build.bat
     
