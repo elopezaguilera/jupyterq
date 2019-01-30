@@ -16,8 +16,7 @@ build_script:
     tests\test.bat
 
     build\conda_build.bat
-
-    conda init cmd.exe
+    
 after_build:
 - cmd: >-
 
