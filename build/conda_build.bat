@@ -1,10 +1,10 @@
 :: Conda build
 set OP=%PATH%
-::set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+set PATH=C:\Miniconda3-x64\Scripts;C:\Miniconda3-x64;%PATH%
 rmdir /S /Q C:\projects\jupyterq\q\
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
 :: install conda build requirements (use version < 3.12 to avoid warning about verify in output file)
-conda install -y "conda-build<3.12"                                       || goto :error
+call "C:\Miniconda3-x64\Scripts\conda.bat" -y "conda-build<3.12"                                       || goto :error
 conda install -y anaconda-client                                          || goto :error
 :: set up requirements from requirements.txt
 python -c "print('|'.join([line.strip('\n')for line in open('requirements.txt')]))" > reqs.txt
