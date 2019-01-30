@@ -10,7 +10,7 @@ conda install -y anaconda-client                                          || got
 python -c "print('|'.join([line.strip('\n')for line in open('requirements.txt')]))" > reqs.txt
 set /P JUPYTERQ_REQS=<reqs.txt
 :: set up kdb+ if available
-set PATH=C:\Miniconda3-x64\Scripts;%PATH%
+::set PATH=C:\Miniconda3-x64\Scripts;%PATH%
 if defined QLIC_KC ( echo|set /P=%QLIC_KC% > kc.lic.enc & certutil -decode kc.lic.enc kc.lic & set QLIC=%CD%)
 conda build --output conda-recipe > packagenames.txt                      || goto :error
 if defined QLIC_KC (
