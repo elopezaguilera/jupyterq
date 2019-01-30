@@ -1,5 +1,5 @@
 :: Conda build
-call "C:\Miniconda3-x64\Scripts\activate.bat"
+cmd "/K" C:\Miniconda3-x64\Scripts\activate.bat C:\Miniconda3-x64
 set OP=%PATH%
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
 rmdir /S /Q C:\projects\jupyterq\q\
