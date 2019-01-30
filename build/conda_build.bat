@@ -1,7 +1,6 @@
 :: Conda build
-conda install -y -n root -c pscondaenvs pscondaenvs
 set OP=%PATH%
-set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
+::set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
 rmdir /S /Q C:\projects\jupyterq\q\
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
 :: install conda build requirements (use version < 3.12 to avoid warning about verify in output file)
