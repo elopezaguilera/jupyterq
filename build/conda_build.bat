@@ -1,10 +1,10 @@
 :: Conda build
-conda install -y conda=4.5.11
 set OP=%PATH%
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
 rmdir /S /Q C:\projects\jupyterq\q\
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
 :: install conda build requirements (use version < 3.12 to avoid warning about verify in output file)
+conda install -y conda=4.5.11
 conda install -y --no-update-dependencies "conda-build<3.12"                                       || goto :error
 conda install -y anaconda-client                                          || goto :error
 ::conda install -y conda=4.5.11
