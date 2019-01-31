@@ -1,5 +1,5 @@
 :: Conda build
-conda install conda=4.5.11
+conda install -y conda=4.5.11
 set OP=%PATH%
 set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
 rmdir /S /Q C:\projects\jupyterq\q\
