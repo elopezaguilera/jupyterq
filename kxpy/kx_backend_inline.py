@@ -65,7 +65,9 @@ def initialise(qpubfunc,qcommfunc,qclearfunc,qipythonfunc):
   IPython.get_ipython=get_ipython
   from ipywidgets.widgets import widget
   from matplotlib.backends import backend_nbagg
+  from ipykernel import comm
   #monkey patch the Comm class for ipywidget
+  comm.Comm=KxComm
   widget.Comm=KxComm 
   widget.clear_output=clear_output
   backend_nbagg.Comm=KxComm
